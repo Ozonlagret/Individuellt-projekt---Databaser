@@ -344,9 +344,19 @@ namespace Individuellt_projekt___Databaser
                                 Console.WriteLine("Lärare-Id: ");
                                 int personelId = InputManagement.UserInput(11, 1000);
 
-                                Console.WriteLine("Ange betyg (A-F): ");
-                                string? input = Console.ReadLine();
-                                char grade = char.ToUpper(input[0]);
+                                Console.WriteLine("Ange betyg (1 = E; 2 = D; 3 = C; 4 = B; 5 = A; 6 = F): ");
+                                int gradeNumber = InputManagement.UserInput(1, 6);
+                                char grade = 'O';
+
+                                if (gradeNumber == 1) grade = 'E';
+                                else if (gradeNumber == 2) grade = 'D';
+                                else if (gradeNumber == 3) grade = 'C';
+                                else if (gradeNumber == 4) grade = 'B';
+                                else if (gradeNumber == 5) grade = 'A';
+                                else if (gradeNumber == 6) grade = 'F';
+
+                                //string? input = Console.ReadLine();
+                                //char grade = char.ToUpper(input[0]);
 
                                 DateTime signageDate = DateTime.Today;
 
